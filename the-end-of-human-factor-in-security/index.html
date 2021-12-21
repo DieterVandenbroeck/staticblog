@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>The end of the &#x27;human factor&#x27; in security services</title>
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css%3Fv=7903016016.css" />
+
+	<meta name="description" content="The DARPA Cyber Grand Challenge aims to automate offensive and defensive security. In the final CTF, multiple teams battle to defend and attack the network." />
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <link rel="canonical" href="https://www.dietervandenbroeck.be/the-end-of-human-factor-in-security/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://www.dietervandenbroeck.be/the-end-of-human-factor-in-security/amp/" />
+    
+    <meta property="og:site_name" content="Dieter&#x27;s bl0g" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="The end of the &#x27;human factor&#x27; in security services" />
+    <meta property="og:description" content="The DARPA Cyber Grand Challenge aims to automate both offensive and defensive security activities. In the finals, multiple teams will face each other in a CTF to see who can defend their network the best while scoring points against each other." />
+    <meta property="og:url" content="https://www.dietervandenbroeck.be/the-end-of-human-factor-in-security/" />
+    <meta property="og:image" content="https://www.dietervandenbroeck.be/content/images/2018/11/franck-v-517860-unsplash.jpg" />
+    <meta property="article:published_time" content="2015-07-10T07:31:00.000Z" />
+    <meta property="article:modified_time" content="2018-12-31T10:30:08.000Z" />
+    <meta property="article:tag" content="capture the flag" />
+    <meta property="article:tag" content="ctf" />
+    <meta property="article:tag" content="cyber grand challenge" />
+    <meta property="article:tag" content="darpa" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The end of the &#x27;human factor&#x27; in security services" />
+    <meta name="twitter:description" content="The DARPA Cyber Grand Challenge aims to automate both offensive and defensive security activities. In the finals, multiple teams will face each other in a CTF to see who can defend their network the best while scoring points against each other." />
+    <meta name="twitter:url" content="https://www.dietervandenbroeck.be/the-end-of-human-factor-in-security/" />
+    <meta name="twitter:image" content="https://www.dietervandenbroeck.be/content/images/2018/11/franck-v-517860-unsplash.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Dieter Vandenbroeck" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="capture the flag, ctf, cyber grand challenge, darpa" />
+    <meta name="twitter:site" content="@dietervandenbro" />
+    <meta name="twitter:creator" content="@dietervandenbro" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="2666" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Dieter&#x27;s bl0g",
+        "url": "https://www.dietervandenbroeck.be/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.dietervandenbroeck.be/favicon.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Dieter Vandenbroeck",
+        "url": "https://www.dietervandenbroeck.be/author/dieter/",
+        "sameAs": [
+            "https://twitter.com/dietervandenbro"
+        ]
+    },
+    "headline": "The end of the &#x27;human factor&#x27; in security services",
+    "url": "https://www.dietervandenbroeck.be/the-end-of-human-factor-in-security/",
+    "datePublished": "2015-07-10T07:31:00.000Z",
+    "dateModified": "2018-12-31T10:30:08.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.dietervandenbroeck.be/content/images/2018/11/franck-v-517860-unsplash.jpg",
+        "width": 2000,
+        "height": 2666
+    },
+    "keywords": "capture the flag, ctf, cyber grand challenge, darpa",
+    "description": "The DARPA Cyber Grand Challenge aims to automate both offensive and defensive security activities. In the finals, multiple teams will face each other in a CTF to see who can defend their network the best while scoring points against each other.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.dietervandenbroeck.be/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.22" />
+    <link rel="alternate" type="application/rss+xml" title="Dieter&#x27;s bl0g" href="https://www.dietervandenbroeck.be/rss/" />
+    <script defer src="https://unpkg.com/@tryghost/portal@~1.12.0/umd/portal.min.js" data-ghost="https://www.dietervandenbroeck.be/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style><style>:root {--ghost-accent-color: #15171A;}</style>
+	
+	<!-- Google Analytics code -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43104993-1"></script>
+	<script type="text/javascript" src="../assets/js/google_analytics.js%3Fv=7903016016"></script>
+	
+</head>
+
+<body class="post-template tag-capture-the-flag tag-ctf tag-cyber-grand-challenge tag-darpa">
+
+	<nav id="menu">
+	<a class="close-button">Close</a>
+	<div class="nav-wrapper">
+		<p class="nav-label">Menu</p>
+		<ul>
+			<li class="nav-home" role="presentation"><a href="https://www.dietervandenbroeck.be">Home</a></li>
+			<li class="nav-responsible-disclosure" role="presentation"><a href="https://www.dietervandenbroeck.be/responsible-disclosure/">Responsible disclosure</a></li>
+			<li class="nav-author" role="presentation"><a href="https://www.dietervandenbroeck.be/about-me/">Author</a></li>
+			<li class="nav-twitter"><a href="https://twitter.com/dietervandenbro" title="@dietervandenbro"><i class="ic ic-twitter"></i> Twitter</a></li>
+			<li class="nav-rss"><a href="https://www.dietervandenbroeck.be/rss/"><i class="ic ic-rss"></i> Subscribe</a></li>
+		</ul>
+	</div>
+</nav>
+
+
+	<section id="wrapper">
+		<a class="hidden-close"></a>
+		
+
+<div class="progress-container">
+	<span class="progress-bar"></span>
+</div>
+
+<header id="post-header" class="has-cover" >
+	<div class="inner">
+		<nav id="navigation">
+			<span id="home-button" class="nav-button">
+				<a class="home-button" href="https://www.dietervandenbroeck.be" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+			</span>
+			<span id="menu-button" class="nav-button">
+				<a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+			</span>
+		</nav>
+		<h1 class="post-title">The end of the ‘human factor’ in security services</h1>
+		<span class="post-meta"><a href="../author/dieter/index.html">Dieter Vandenbroeck</a> | <time datetime="2015-07-10">10 Jul 2015</time></span>
+		<div class="post-cover cover"></div>  
+		<style nonce="d6bb598726789787f9d71fac64645b6a"> div.post-cover {background-image: url('https://www.dietervandenbroeck.be/content/images/2018/11/franck-v-517860-unsplash.jpg'); }</style>"
+	</div>
+</header>
+
+<main class="content" role="main">
+	<article class="post tag-capture-the-flag tag-ctf tag-cyber-grand-challenge tag-darpa">
+		<div class="inner">
+
+			<section class="post-content">
+				<p>It’s not a secret that a lot of jobs will be taken over in the (near) future by computers and robots. According to the Telegraph, about ten million British jobs could be at stake in the next twenty years; that’s about one in three jobs. With repetitive jobs diminishing, other jobs will arise.</p><p>One of the jobs that’s rather unlikely to be taken over by computers is related to security services. It’s hard to imagine that a computer can take over a job that requires skills, knowledge, insights and other traits we think we have. If it’s up to DARPA, computers will play a much bigger role in this domain in the future. Will this cost jobs, or will it only help us doing a better job?</p><p>It’s no secret that securing a network and all information on it is hard. Apart from legacy systems and multiple vendors, it’s a challenge to get the required budget and to keep up with everything that’s happening. And that’s a limited overview of problems where the weakest link, the end-user, is not even included in the picture.</p><p>On average, it takes about one year for defenders to discover a security vulnerability. Even if the vulnerability is publicly known, it takes one year on average. For some people and companies, this will sound like a joke. But think about all of the credit card thefts of the last few years (and the Trump Hotel Collection that confirmed a breach only two days ago). For a lot of companies, one year is probably impossible to achieve in the next few years.</p><p>And to make it worse, it’s not an even battle; in defense, all vulnerabilities need to be fixed. In offense, you only need the one vulnerability that gives you what you need. So what if we can automate the defensive side, aligned with an automated offensive side that provides information?</p><p>DARPA’s Cyber Grand Challenge aims to do just that: automate the entire defense and offense activities. In the finals taking place in August 2016 (during DefCON), the finalists will be competing on the following areas of excellence: autonomous analysis (of computer software), autonomous patching, autonomous vulnerability scanning, autonomous service resiliency and autonomous network defense. The aim is to see the unraveling of a full capture the flag competition in just minutes (instead of hours when humans are competing), indicating if their abovementioned goal is fiction or possible reality.</p><p>[1] <a href="https://www.telegraph.co.uk/finance/newsbysector/industry/11219688/Ten-million-jobs-at-risk-from-advancing-technology.html">https://www.telegraph.co.uk/finance/newsbysector/industry/11219688/Ten-million-jobs-at-risk-from-advancing-technology.html</a> </p><p>[2] <a href="https://krebsonsecurity.com/2015/10/trump-hotel-collection-confirms-card-breach/">https://krebsonsecurity.com/2015/10/trump-hotel-collection-confirms-card-breach/</a> </p><p>[3] <a href="http://www.cybergrandchallenge.com/">http://www.cybergrandchallenge.com/</a> </p><p>[4] <a href="https://cgc.darpa.mil/">https://cgc.darpa.mil/</a></p>
+			</section>
+
+			<section class="post-info">
+
+				<aside class="post-tags">
+					<a href="../tag/capture-the-flag/index.html">capture the flag</a> <a href="../tag/ctf/index.html">ctf</a> <a href="../tag/cyber-grand-challenge/index.html">cyber grand challenge</a> <a href="../tag/darpa/index.html">darpa</a>
+				</aside>
+
+				<div class="clear"></div>
+
+						<aside class="post-author">
+							<figure class="post-author-avatar avatar">
+							</figure>
+							<div class="post-author-bio">
+								<h4 class="post-author-name"><a href="../author/dieter/index.html">Dieter Vandenbroeck</a></h4>
+									<span class="post-author-location"><i class="ic ic-location"></i> Begium</span>
+									<span class="post-author-twitter"><i class="ic ic-twitter"></i> <a target="_blank" href="https://twitter.com/@dietervandenbro">Twitter</a></span>
+							</div>
+							<div class="clear"></div>
+						</aside>
+
+			</section>
+
+
+			<section class="post-comments">
+				<a id="show-disqus" class="post-comments-activate">Show Comments</a>
+			    <div id="disqus_thread"></div>
+			</section>
+
+
+			<aside class="post-nav">
+					<a class="post-nav-next" href="../would-you-kill-bunch-of-school-kids/index.html">
+						<section class="post-nav-teaser">
+							<i class="ic ic-arrow-left"></i>
+							<h2 class="post-nav-title">Would you kill a bunch of school kids or an elderly couple?</h2>
+							<p class="post-nav-excerpt">With self-driving cars, there are many ethical questions to be answered. Should the car decide to kill the driver to save a bunch of school kids? Should it deliberately steer into an elderly couple to save a newborn?&hellip;</p>
+						</section>
+					</a>
+					<a class="post-nav-prev" href="../is-there-any-kind-of-vehicle-that-hasnt-been-hacked/index.html">
+						<section class="post-nav-teaser">
+							<i class="ic ic-arrow-right"></i>
+							<h2 class="post-nav-title">Is there any kind of vehicle that hasn&#x27;t been hacked?</h2>
+							<p class="post-nav-excerpt">Many vehicles can be hacked. Cars can be taken over completely, rendering all pedals and steering wheel useless. The communication system of commercial passenger airplanes can be breached without much difficulty. Yachts and even military drones, can be misguided using a custom GPS signal.&hellip;</p>
+						</section>
+					</a>
+				<div class="clear"></div>
+			</aside>
+
+
+		</div>
+	</article>
+</main>
+
+
+		<div id="body-class" class="post-template tag-capture-the-flag tag-ctf tag-cyber-grand-challenge tag-darpa"></div>
+
+		<footer id="footer">
+			<div class="inner">
+				<section class="credits">
+					<span class="credits-software">Published with <a href="https://ghost.org">Ghost</a> using <a href="https://www.digitalocean.com/">DigitalOcean</a></span>
+				</section>
+			</div>
+		</footer>
+	</section>
+
+	<script type="text/javascript" src="../assets/js/script.js%3Fv=7903016016"></script>
+
+	
+
+</body>
+</html>

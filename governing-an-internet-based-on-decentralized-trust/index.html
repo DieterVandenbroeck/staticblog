@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>The internet: decentralized trust managed by a few tech companies</title>
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css%3Fv=7903016016.css" />
+
+	<meta name="description" content="We use certificates to protect us on the internet: by design a system of decentralized trust, but essentially governed by a handful of organizations." />
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <link rel="canonical" href="https://www.dietervandenbroeck.be/governing-an-internet-based-on-decentralized-trust/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://www.dietervandenbroeck.be/governing-an-internet-based-on-decentralized-trust/amp/" />
+    
+    <meta property="og:site_name" content="Dieter&#x27;s bl0g" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="The internet: decentralized trust managed by a few tech companies" />
+    <meta property="og:description" content="We use certificates on a daily basis to protect us on the internet. These certificates are by design a system of decentralized trust, but this system is essentially governed by a handful of organizations." />
+    <meta property="og:url" content="https://www.dietervandenbroeck.be/governing-an-internet-based-on-decentralized-trust/" />
+    <meta property="og:image" content="https://www.dietervandenbroeck.be/content/images/2019/07/photo-1513037341755-a4a1257ccb6f.jpg" />
+    <meta property="article:published_time" content="2019-03-04T15:54:16.000Z" />
+    <meta property="article:modified_time" content="2019-07-23T14:12:02.000Z" />
+    <meta property="article:tag" content="trust" />
+    <meta property="article:tag" content="https" />
+    <meta property="article:tag" content="hsts" />
+    <meta property="article:tag" content="darkmatter" />
+    <meta property="article:tag" content="root ca" />
+    <meta property="article:tag" content="pki" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The internet: decentralized trust managed by a few tech companies" />
+    <meta name="twitter:description" content="We use certificates on a daily basis to protect us on the internet. These certificates are by design a system of decentralized trust, but this system is essentially governed by a handful of organizations." />
+    <meta name="twitter:url" content="https://www.dietervandenbroeck.be/governing-an-internet-based-on-decentralized-trust/" />
+    <meta name="twitter:image" content="https://www.dietervandenbroeck.be/content/images/2019/07/photo-1513037341755-a4a1257ccb6f.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Dieter Vandenbroeck" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="trust, https, hsts, darkmatter, root ca, pki" />
+    <meta name="twitter:site" content="@dietervandenbro" />
+    <meta name="twitter:creator" content="@dietervandenbro" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="720" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Dieter&#x27;s bl0g",
+        "url": "https://www.dietervandenbroeck.be/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.dietervandenbroeck.be/favicon.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Dieter Vandenbroeck",
+        "url": "https://www.dietervandenbroeck.be/author/dieter/",
+        "sameAs": [
+            "https://twitter.com/dietervandenbro"
+        ]
+    },
+    "headline": "The internet: decentralized trust managed by a few tech companies",
+    "url": "https://www.dietervandenbroeck.be/governing-an-internet-based-on-decentralized-trust/",
+    "datePublished": "2019-03-04T15:54:16.000Z",
+    "dateModified": "2019-07-23T14:12:02.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.dietervandenbroeck.be/content/images/2019/07/photo-1513037341755-a4a1257ccb6f.jpg",
+        "width": 1080,
+        "height": 720
+    },
+    "keywords": "trust, https, hsts, darkmatter, root ca, pki",
+    "description": "We use certificates on a daily basis to protect us on the internet. These certificates are by design a system of decentralized trust, but this system is essentially governed by a handful of organizations.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.dietervandenbroeck.be/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.22" />
+    <link rel="alternate" type="application/rss+xml" title="Dieter&#x27;s bl0g" href="https://www.dietervandenbroeck.be/rss/" />
+    <script defer src="https://unpkg.com/@tryghost/portal@~1.12.0/umd/portal.min.js" data-ghost="https://www.dietervandenbroeck.be/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style><style>:root {--ghost-accent-color: #15171A;}</style>
+	
+	<!-- Google Analytics code -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43104993-1"></script>
+	<script type="text/javascript" src="../assets/js/google_analytics.js%3Fv=7903016016"></script>
+	
+</head>
+
+<body class="post-template tag-trust tag-https tag-hsts tag-darkmatter tag-root-ca tag-pki">
+
+	<nav id="menu">
+	<a class="close-button">Close</a>
+	<div class="nav-wrapper">
+		<p class="nav-label">Menu</p>
+		<ul>
+			<li class="nav-home" role="presentation"><a href="https://www.dietervandenbroeck.be">Home</a></li>
+			<li class="nav-responsible-disclosure" role="presentation"><a href="https://www.dietervandenbroeck.be/responsible-disclosure/">Responsible disclosure</a></li>
+			<li class="nav-author" role="presentation"><a href="https://www.dietervandenbroeck.be/about-me/">Author</a></li>
+			<li class="nav-twitter"><a href="https://twitter.com/dietervandenbro" title="@dietervandenbro"><i class="ic ic-twitter"></i> Twitter</a></li>
+			<li class="nav-rss"><a href="https://www.dietervandenbroeck.be/rss/"><i class="ic ic-rss"></i> Subscribe</a></li>
+		</ul>
+	</div>
+</nav>
+
+
+	<section id="wrapper">
+		<a class="hidden-close"></a>
+		
+
+<div class="progress-container">
+	<span class="progress-bar"></span>
+</div>
+
+<header id="post-header" class="has-cover" >
+	<div class="inner">
+		<nav id="navigation">
+			<span id="home-button" class="nav-button">
+				<a class="home-button" href="https://www.dietervandenbroeck.be" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+			</span>
+			<span id="menu-button" class="nav-button">
+				<a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+			</span>
+		</nav>
+		<h1 class="post-title">Governing an internet based on decentralized trust is still a centralized matter</h1>
+		<span class="post-meta"><a href="../author/dieter/index.html">Dieter Vandenbroeck</a> | <time datetime="2019-03-04">04 Mar 2019</time></span>
+		<div class="post-cover cover"></div>  
+		<style nonce="3baa6b3466af94dd0e31f323f3f5197a"> div.post-cover {background-image: url('https://www.dietervandenbroeck.be/content/images/2019/07/photo-1513037341755-a4a1257ccb6f.jpg'); }</style>"
+	</div>
+</header>
+
+<main class="content" role="main">
+	<article class="post tag-trust tag-https tag-hsts tag-darkmatter tag-root-ca tag-pki">
+		<div class="inner">
+
+			<section class="post-content">
+				<p>We use the internet on a daily basis, both for professional as for personal usage. Sending emails, checking social media, browsing websites and watching videos online have become the standard, where we don't think about how all of this is possible. All of these systems are based on trust, but we hardly ever think about it. The only times the concepts of trust and the internet come up are usually when data breaches or internet censorship come up; in a data breach we loose trust in the organization that we trusted with our data. When a foreign nation censors or even blocks the internet to resolve a conflict, or when the notion of net neutrality comes up, we trust in the open nature of the internet we are used to. </p><p>A recent phenomenon that combines the internet and trust is blockchain: this much-hyped technology is also based on trust, but solutions that aim to replace a well-known system (let's use BitCoin replacing traditional banks) often misrepresent the inherited trust, as <a href="https://www.schneier.com/blog/archives/2019/02/blockchain_and_.html">explained by Bruce Schneier</a>. Where public interpretation is that such a system depends on shared trust, with no single organizations (such as banks) to be trusted, the notion of trust corresponds only to the cryptographic operations that are the basis of the system, not to anything built on top.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.dietervandenbroeck.be/content/images/2019/02/image-1.png" class="kg-image" alt loading="lazy"><figcaption>Only a few core functionalities of the internet are governed, the rest is rather open to everyone.</figcaption></figure><p>Most people don't know this, and the small group of people that know the technical architecture of the internet (of said differently, who understand how the internet works underneath) often don't realize this, but the internet is essentially governed by a small number of organizations: </p><ul><li>IP addresses and DNS names, the unique identifiers used on the internet, are governed by the private-public partnership <a href="https://www.icann.org">Internet Corporation for Assigned Names and Numbers (ICANN)</a>. It performs its function through a system of decentralized trust, using local registrars on the one hand and <a href="http://www.root-servers.org">root servers</a> on the other hand that ICANN needs to trust. Misuse of both could essentially break the internet as we know it.</li><li>Certificates, used for secure connections such as HTTPS, are governed through a system of decentralized trust. The base of this system are Root CAs, that need to be trusted by the big technology players such as Microsoft, Google and Mozilla. <em>I've added a long description on this at the bottom of the post to explain this system in more detail.</em></li></ul><p>Especially for HTTPS, what most people use on a daily basis but don't know the underlying elements, trust is a special notion. In general, people have been instructed for years that HTTPS in the URL, often represented with the green padlock, means 'secure'. Nowadays, when people browse to a certain website (such as their homebanking website), they trust the website that comes up together with the green padlock, even though they don't understand the system behind the padlock.</p><p>Essentially, there are 2 types of companies that make sure this padlock actually means something trustworthy: </p><ul><li>A root CA - such as Verizon, GlobalSign, Comodo, Symantec, IdenTrust and Thawte - ensures the integrity of the certificate system. They verify that certificates are only issued correctly, to intermediate organizations that issue certificates only to organizations for websites they manage. I was able to get the certificate for www.dietervandenbroeck.be from Let's Encrypt because I could prove ownership of the domain, and Let's Encrypt is trusted by IdenTrust because they could prove they know how to manage this system (including verifying ownership of a domain before issuing a certificate).</li><li>Technology companies - such as <a href="https://aka.ms/rootcert">Microsoft</a>, <a href="https://www.apple.com/certificateauthority/ca_program.html">Apple </a>and <a href="https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/">Mozilla </a>- ensure that only trusted root CAs are trusted on your local system. They verify that a root CA has good practices in place to perform its function (as denoted above). </li></ul><p>In essence, a root CA represents the top of the theoretical trust. But the technology companies represent the top of the practical trust. When a root CA is not trusted by most of these technology companies, this will have a huge impact. Consider a situation where bank X has a certificate that is connected to root CA Q, and where Apple trusts this root CA but Microsoft does not. When a user browses to his bank website using HTTPS (as he should) on an Apple product (using Safari), he will get a secure connection and a padlock. But when he uses Windows (using Internet Explorer), he will not get a secure connection and will get an error screen. Regardless of the theoretical trust represented through the certificate and the root CA and the practical trust on Apple products, the practical trust is gone completely as news will spread that bank Q does not provide a secure connection.</p><p>To put it simple, Microsoft, Apple and Mozilla have full control over what is trusted on the internet (based on a certificate) and what is not. The public-key system that is theoretically fully decentralized, is in essence governed by 3 major technology companies. So what happens when they exercise their control? </p><ul><li>Symantec was known as one of the major root CAs, operating a series of Certificate Authorities under various brand names including Thawte, VeriSign, Equifax, GeoTrust, and RapidSSL. When <a href="https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html">Google engineers reached the conclusion that the Symantec operations were not up to standard</a>, they started a distrust process. This is not a formal process with clear steps though, but consisted of 2 steps. As a first step, the engineers started a <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/eUAKwjihhBs%5B251-275%5D">public discussion with Symantec</a> where they shared their intent to distrust Symantec as a root CA. This discussion was intended to verify their claims and to gather public support for their second step: gradually removing trust in Google Chrome for the Symantec root CA certificates. Due to their market share and smart play (public discussion), Apple and Mozilla followed as well. Symantec had no choice but to cut off its root CA activities. <br>This situation is similar to what happened with <a href="https://threatpost.com/final-report-diginotar-hack-shows-total-compromise-ca-servers-103112/77170/">DigiNotar in 2011</a>: they suffered a breach in 2011, after which the Dutch government revoked their trust. The organization claimed they could continue with a few changes, but the broken trust meant the end and Mozilla included an <a href="https://security.stackexchange.com/questions/174474/why-is-diginotar-ca-still-in-my-mozilla-firefox">anti-trust notion</a> to protect users against themselves. </li><li><a href="https://www.darkmatter.ae/">DarkMatter </a>is a cybersecurity company that exists "<em>to enable businesses and governments to become smart, safe, and cyber resilient</em>". Today, their certificates are trusted in browsers because they have been cross-signed by another trusted root CA: QuoVadis. In essence, DarkMatter is able to issue certificates that are already widely trusted. Around a year ago, the organization considered this insufficient and issued a request to be included in the Mozilla trust store as a full root CA in a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1427262">public request</a>. Following the <a href="https://wiki.mozilla.org/CA/Application_Process#Process_Overview">Mozilla CA application process</a>, they have shared a number of documents describing their CA practices and objectives, and their applicability is currently being revised. <br>In a recent <a href="https://www.reuters.com/investigates/special-report/usa-spying-raven/">Reuters report concerning 'project Raven'</a>, DarkMatter is named as one of the organizations behind a large-scale cyber offensive against 'enemies of the United Arab Emirates'.  This concern was <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1427262#c85">shared </a>in the application process, but was not yet addressed: the current step only considers the CA capabilities of the applicant, other concerns can be discussed in a later stage. The decision in this matter, to be taken by Mozilla engineers, is to be seen.</li></ul><p>Both examples shed a clear light on the (potential) power of these major tech players when considering trust on the internet: they essentially control which organizations can be considered trusted, and which organizations have fallen afoul. It should be clear that this can have far-reaching consequences. Following the Reuters article, advice frequently voiced was to remove QuoVadis certificates from your local trust store, because QuoVadis provided DarkMatter with their certificate. A cautious move, but with a serious impact depending on your usage. <a href="https://protonmail.com/about">ProtonMail</a>, a company that is "<em>building an internet that <strong><strong>protects privacy</strong></strong>, starting with email</em>", also <a href="https://protonmail.com/blog/dark-matter-quo-vadis/">uses certificates issues by </a>QuoVadis<a href="https://protonmail.com/blog/dark-matter-quo-vadis/">.</a> Doubts on a single certificate issued could lead to a breakdown of other services that are linked to the same root CA, often by pure coincidence.  </p><p>It should be clear that the notion of trust on the internet is controlled, or at least impacted, by a few major organizations. On the one hand, they can grant an organization a lot of power to use in offensive cyberattacks, whereas on the other hand they serve a public function of protecting the internet against these kind of practices. A lot of power to be used wisely, on which we can only hope the people wielding it live truly up to the motto <a href="https://en.wikipedia.org/wiki/Don%27t_be_evil">don't be evil</a>...</p><h3 id="background-info-decentralized-trust-using-certificates">Background info: decentralized trust using certificates</h3><p>When you visit a website over HTTPS, a secure connection is established between your browser and the web server. This is based on public-key cryptography which boils down to the following (very simplified view):</p><ol><li>Your browser connects to the server (www.dietervandenbroeck.be) and requests a secured connection (HTTPS)</li><li>The server will start a secured tunnel and will proof its identity with a certificate (i.e. it will proof you have a connection with www.dietervandenbroeck.be and not with another server that is incorrectly representing this server).</li><li>The browser receives the certificate and checks 2 parts: </li></ol><ul><li>Is the name in the certificate the same as the website to which it connected (i.e. is the name in the certificate www.dietervandenbroeck.be)?</li><li>Does the signature included in the certificate belong to the public key that is included in the certificate? Using public-key cryptography, a signature created using a private key can be verified by anyone using the public key, while the private key remains hidden.</li><li>Is the certificate part of a trusted certificate chain?  </li></ul><p>Every step until the very last one depends on algorithms that have been discussed and agreed upon. The goal of this last step, validating the trust chain, is to ensure that not everyone can generate a certificate for every domain. The goal of the certificate is to proof the identity; if everyone can create a certificate for every domain, this proof would be useless. To solve this, the concept of a <em>Root Certificate Authority (or root CA)</em> was created. A root CA is the top of a trust chain, and all certificates should be directly or indirectly signed by a root CA to be trusted. To enable verification of a trust chain, vendors of browsers or operating systems assemble a list of root CAs they consider safe and add these certificates in a local <em>certificate store</em>. </p><p>A very specific example is this website: the certificate for www.dietervandenbroeck.be was signed by Let's Encrypt (using the "Let's Encrypt Authority X3" certificate). In its own turn, the <a href="https://letsencrypt.org/certificates/">certificate of Let's Encrypt was signed by root CA IdenTrust</a> (using certificate "DST Root CA X3"). Because IdenTrust is included in the certificate stores, your browser will know the certificate chain is trusted.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.dietervandenbroeck.be/content/images/2019/02/image.png" class="kg-image" alt loading="lazy"><figcaption>The certificate for this website was signed by Let's Encrypt, which is trusted in its turn by root CA IdenTrust.</figcaption></figure><p><em>Update</em>: There was an error in the ProtonMail section; ProtonMail uses a QuoVadis certificate,  not a DarkMatter certificate as incorrectly stated before. QuoVadis also provided the DarkMatter certificate, giving rise to the ProtonMail issues when QuoVadis is removed from the local trust store.</p>
+			</section>
+
+			<section class="post-info">
+
+				<aside class="post-tags">
+					<a href="../tag/trust/index.html">trust</a> <a href="../tag/https/index.html">https</a> <a href="../tag/hsts/index.html">hsts</a> <a href="../tag/darkmatter/index.html">darkmatter</a> <a href="../tag/root-ca/index.html">root ca</a> <a href="../tag/pki/index.html">pki</a>
+				</aside>
+
+				<div class="clear"></div>
+
+						<aside class="post-author">
+							<figure class="post-author-avatar avatar">
+							</figure>
+							<div class="post-author-bio">
+								<h4 class="post-author-name"><a href="../author/dieter/index.html">Dieter Vandenbroeck</a></h4>
+									<span class="post-author-location"><i class="ic ic-location"></i> Begium</span>
+									<span class="post-author-twitter"><i class="ic ic-twitter"></i> <a target="_blank" href="https://twitter.com/@dietervandenbro">Twitter</a></span>
+							</div>
+							<div class="clear"></div>
+						</aside>
+
+			</section>
+
+
+			<section class="post-comments">
+				<a id="show-disqus" class="post-comments-activate">Show Comments</a>
+			    <div id="disqus_thread"></div>
+			</section>
+
+
+			<aside class="post-nav">
+					<a class="post-nav-next" href="../a-cyberattack-is-not-that-bad-for-your-organisation/index.html">
+						<section class="post-nav-teaser">
+							<i class="ic ic-arrow-left"></i>
+							<h2 class="post-nav-title">The impact of cyber attacks is highly overrated</h2>
+							<p class="post-nav-excerpt">The exact impact of a cyber attack cannot be predicted or easily calculated. Costs of up to $347 million, a 7.5% decrease in stock price and a loss of 51% of customers are shared. Most of these numbers are not realistic, must be viewed over a larger period of time for each specific company.&hellip;</p>
+						</section>
+					</a>
+					<a class="post-nav-prev" href="../tld-registry-operators-could-help-secure-the-internet/index.html">
+						<section class="post-nav-teaser">
+							<i class="ic ic-arrow-right"></i>
+							<h2 class="post-nav-title">TLD registry operators could help secure the internet</h2>
+							<p class="post-nav-excerpt">The HSTS preload list informs browsers which websites always need to be loaded using HTTPS. Top level domains, such as .com, can also be added to this list, enforcing all websites in their reach to use HTTPS. Google's .trust, only launched in October 2018, uses this tactic to create a safer web.&hellip;</p>
+						</section>
+					</a>
+				<div class="clear"></div>
+			</aside>
+
+
+		</div>
+	</article>
+</main>
+
+
+		<div id="body-class" class="post-template tag-trust tag-https tag-hsts tag-darkmatter tag-root-ca tag-pki"></div>
+
+		<footer id="footer">
+			<div class="inner">
+				<section class="credits">
+					<span class="credits-software">Published with <a href="https://ghost.org">Ghost</a> using <a href="https://www.digitalocean.com/">DigitalOcean</a></span>
+				</section>
+			</div>
+		</footer>
+	</section>
+
+	<script type="text/javascript" src="../assets/js/script.js%3Fv=7903016016"></script>
+
+	
+
+</body>
+</html>

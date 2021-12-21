@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>When security through obscurity is a good idea</title>
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css%3Fv=7903016016.css" />
+
+	<meta name="description" content="Security through obscurity is considered bad practice. But what if we can hinder an attacker using obscurity without relying on it as a security principle?" />
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <link rel="canonical" href="https://www.dietervandenbroeck.be/when-security-through-obscurity-is-a-good-idea/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://www.dietervandenbroeck.be/when-security-through-obscurity-is-a-good-idea/amp/" />
+    
+    <meta property="og:site_name" content="Dieter&#x27;s bl0g" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="When security through obscurity is a good idea" />
+    <meta property="og:description" content="Security through obscurity is considered bad practice. But what if we can hinder an attacker just that bit more by providing obscurity without relying on it as a security principle?" />
+    <meta property="og:url" content="https://www.dietervandenbroeck.be/when-security-through-obscurity-is-a-good-idea/" />
+    <meta property="og:image" content="https://www.dietervandenbroeck.be/content/images/2018/11/amy-elting-756987-unsplash.jpg" />
+    <meta property="article:published_time" content="2013-08-18T08:28:00.000Z" />
+    <meta property="article:modified_time" content="2018-12-31T10:31:57.000Z" />
+    <meta property="article:tag" content="obscurity" />
+    <meta property="article:tag" content="security through obscurity" />
+    <meta property="article:tag" content="wordpress" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="When security through obscurity is a good idea" />
+    <meta name="twitter:description" content="Security through obscurity is considered bad practice. But what if we can hinder an attacker just that bit more by providing obscurity without relying on it as a security principle?" />
+    <meta name="twitter:url" content="https://www.dietervandenbroeck.be/when-security-through-obscurity-is-a-good-idea/" />
+    <meta name="twitter:image" content="https://www.dietervandenbroeck.be/content/images/2018/11/amy-elting-756987-unsplash.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Dieter Vandenbroeck" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="obscurity, security through obscurity, wordpress" />
+    <meta name="twitter:site" content="@dietervandenbro" />
+    <meta name="twitter:creator" content="@dietervandenbro" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1333" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Dieter&#x27;s bl0g",
+        "url": "https://www.dietervandenbroeck.be/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.dietervandenbroeck.be/favicon.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Dieter Vandenbroeck",
+        "url": "https://www.dietervandenbroeck.be/author/dieter/",
+        "sameAs": [
+            "https://twitter.com/dietervandenbro"
+        ]
+    },
+    "headline": "When security through obscurity is a good idea",
+    "url": "https://www.dietervandenbroeck.be/when-security-through-obscurity-is-a-good-idea/",
+    "datePublished": "2013-08-18T08:28:00.000Z",
+    "dateModified": "2018-12-31T10:31:57.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.dietervandenbroeck.be/content/images/2018/11/amy-elting-756987-unsplash.jpg",
+        "width": 2000,
+        "height": 1333
+    },
+    "keywords": "obscurity, security through obscurity, wordpress",
+    "description": "Security through obscurity is considered bad practice. But what if we can hinder an attacker just that bit more by providing obscurity without relying on it as a security principle?",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.dietervandenbroeck.be/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.22" />
+    <link rel="alternate" type="application/rss+xml" title="Dieter&#x27;s bl0g" href="https://www.dietervandenbroeck.be/rss/" />
+    <script defer src="https://unpkg.com/@tryghost/portal@~1.12.0/umd/portal.min.js" data-ghost="https://www.dietervandenbroeck.be/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style><style>:root {--ghost-accent-color: #15171A;}</style>
+	
+	<!-- Google Analytics code -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43104993-1"></script>
+	<script type="text/javascript" src="../assets/js/google_analytics.js%3Fv=7903016016"></script>
+	
+</head>
+
+<body class="post-template tag-obscurity tag-security-through-obscurity tag-wordpress">
+
+	<nav id="menu">
+	<a class="close-button">Close</a>
+	<div class="nav-wrapper">
+		<p class="nav-label">Menu</p>
+		<ul>
+			<li class="nav-home" role="presentation"><a href="https://www.dietervandenbroeck.be">Home</a></li>
+			<li class="nav-responsible-disclosure" role="presentation"><a href="https://www.dietervandenbroeck.be/responsible-disclosure/">Responsible disclosure</a></li>
+			<li class="nav-author" role="presentation"><a href="https://www.dietervandenbroeck.be/about-me/">Author</a></li>
+			<li class="nav-twitter"><a href="https://twitter.com/dietervandenbro" title="@dietervandenbro"><i class="ic ic-twitter"></i> Twitter</a></li>
+			<li class="nav-rss"><a href="https://www.dietervandenbroeck.be/rss/"><i class="ic ic-rss"></i> Subscribe</a></li>
+		</ul>
+	</div>
+</nav>
+
+
+	<section id="wrapper">
+		<a class="hidden-close"></a>
+		
+
+<div class="progress-container">
+	<span class="progress-bar"></span>
+</div>
+
+<header id="post-header" class="has-cover" >
+	<div class="inner">
+		<nav id="navigation">
+			<span id="home-button" class="nav-button">
+				<a class="home-button" href="https://www.dietervandenbroeck.be" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+			</span>
+			<span id="menu-button" class="nav-button">
+				<a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+			</span>
+		</nav>
+		<h1 class="post-title">When security through obscurity is a good idea</h1>
+		<span class="post-meta"><a href="../author/dieter/index.html">Dieter Vandenbroeck</a> | <time datetime="2013-08-18">18 Aug 2013</time></span>
+		<div class="post-cover cover"></div>  
+		<style nonce="68fd77a7dcb4c4bad18b1caf68399ce7"> div.post-cover {background-image: url('https://www.dietervandenbroeck.be/content/images/2018/11/amy-elting-756987-unsplash.jpg'); }</style>"
+	</div>
+</header>
+
+<main class="content" role="main">
+	<article class="post tag-obscurity tag-security-through-obscurity tag-wordpress">
+		<div class="inner">
+
+			<section class="post-content">
+				<p>Usually, the principle of security through obscurity is just utterly wrong. The idea behind this principle is to have obscurity in your solution as the principal means of security. Of course, this is not a valid substitute for real security: once your obscurity schema is broken, your security would be broken. It might form a defense against automated scripts, but an attacker with sufficient determination will always be able to fight through this defense.</p><p>But as with many things, there is something good to say about this as well. Let's take WordPress as an example. In 2012, 60 million websites were powered by WordPress according to Forbes; 37.73% of websites using a CMS are powered by WordPress according to BuiltWith. This is a huge amount of websites that share (partially) the same code running everything. If there is a vulnerability in this code, there is an enormous amount of websites at risk...</p><p>By default, WordPress installations will use the 'wp_' prefix for all database tables. Put this and information a vulnerability in the WordPress core together, and you've got a decent part of the internet (which part can be checked easily) vulnerable to something that can be (easily) exploited by an automated script. What is the easy solution for an automated attack? Right, obscurity! Changing all the table names away from the default (e.g. remove or edit the prefix) will already help you on this one.</p><p>What about file / directory names? If you put your administration panel in the subdirectory 'admin', every automated tool and every manual guess will disclose the location of your administrative core. The same goes for moving it an obscure directory that will not be found automatically, but including it in the 'robots.txt' file. While you really need to have strong security on that core of your website, making it harder to find lead unskilled / undetermined eyes to another target.</p><p>[1] <a href="https://www.forbes.com/sites/jjcolao/2012/09/05/the-internets-mother-tongue/">https://www.forbes.com/sites/jjcolao/2012/09/05/the-internets-mother-tongue/</a> </p><p>[2] <a href="https://trends.builtwith.com/cms">https://trends.builtwith.com/cms</a> </p><p>[3] <a href="http://www.itsecurityzone.com/legitimate-security-through-obscurity/">http://www.itsecurityzone.com/legitimate-security-through-obscurity/</a> </p><p>[4] <a href="https://digwp.com/2010/10/change-database-prefix/">https://digwp.com/2010/10/change-database-prefix/</a></p>
+			</section>
+
+			<section class="post-info">
+
+				<aside class="post-tags">
+					<a href="../tag/obscurity/index.html">obscurity</a> <a href="../tag/security-through-obscurity/index.html">security through obscurity</a> <a href="../tag/wordpress/index.html">wordpress</a>
+				</aside>
+
+				<div class="clear"></div>
+
+						<aside class="post-author">
+							<figure class="post-author-avatar avatar">
+							</figure>
+							<div class="post-author-bio">
+								<h4 class="post-author-name"><a href="../author/dieter/index.html">Dieter Vandenbroeck</a></h4>
+									<span class="post-author-location"><i class="ic ic-location"></i> Begium</span>
+									<span class="post-author-twitter"><i class="ic ic-twitter"></i> <a target="_blank" href="https://twitter.com/@dietervandenbro">Twitter</a></span>
+							</div>
+							<div class="clear"></div>
+						</aside>
+
+			</section>
+
+
+			<section class="post-comments">
+				<a id="show-disqus" class="post-comments-activate">Show Comments</a>
+			    <div id="disqus_thread"></div>
+			</section>
+
+
+			<aside class="post-nav">
+					<a class="post-nav-next" href="../whats-wrong-with-todays-view-on-security/index.html">
+						<section class="post-nav-teaser">
+							<i class="ic ic-arrow-left"></i>
+							<h2 class="post-nav-title">What&#x27;s wrong with today&#x27;s view on security</h2>
+							<p class="post-nav-excerpt">Security was not important in the early days of development, and now the time to market seems more important. How can we bring security to top of mind in development?&hellip;</p>
+						</section>
+					</a>
+					<a class="post-nav-prev" href="../trust-in-the-bittorrent-protocol/index.html">
+						<section class="post-nav-teaser">
+							<i class="ic ic-arrow-right"></i>
+							<h2 class="post-nav-title">Trust in the BitTorrent protocol</h2>
+							<p class="post-nav-excerpt">Torrents are a common way of sharing files between peers. The BitTorrent protocol is based on trust: share share something, and I'll share something. But without centralized governance, does this trust work?&hellip;</p>
+						</section>
+					</a>
+				<div class="clear"></div>
+			</aside>
+
+
+		</div>
+	</article>
+</main>
+
+
+		<div id="body-class" class="post-template tag-obscurity tag-security-through-obscurity tag-wordpress"></div>
+
+		<footer id="footer">
+			<div class="inner">
+				<section class="credits">
+					<span class="credits-software">Published with <a href="https://ghost.org">Ghost</a> using <a href="https://www.digitalocean.com/">DigitalOcean</a></span>
+				</section>
+			</div>
+		</footer>
+	</section>
+
+	<script type="text/javascript" src="../assets/js/script.js%3Fv=7903016016"></script>
+
+	
+
+</body>
+</html>
